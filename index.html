@@ -1,0 +1,333 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONO | Minimalist Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#666666',
+                        accent: '#007AFF',
+                        neutral: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.8s ease-in-out forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 0.8s ease-out forwards;
+            }
+            .grid-masonry {
+                grid-template-rows: masonry;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white text-primary antialiased">
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight">MONO</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#work" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">Work</a>
+                <a href="#about" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">About</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">Services</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full border-t border-gray-100 py-4 animate-fade-in">
+            <div class="container mx-auto px-6 flex flex-col space-y-4">
+                <a href="#work" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">Work</a>
+                <a href="#about" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">About</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">Services</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 py-24 md:py-0">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-light leading-tight mb-8 animate-fade-in opacity-0" style="animation-delay: 0.2s">
+                    Minimalist <span class="font-medium">Design</span> Works
+                </h1>
+                <p class="text-[clamp(1rem,3vw,1.25rem)] text-secondary max-w-2xl mx-auto mb-12 text-balance animate-fade-in opacity-0" style="animation-delay: 0.4s">
+                    Creating timeless digital experiences through simplicity, functionality, and intentional design.
+                </p>
+                <a href="#work" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 animate-fade-in opacity-0" style="animation-delay: 0.6s">VIEW OUR WORK</a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#work" class="text-primary">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-6">About MONO</h2>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        MONO is a minimalist design studio focused on creating meaningful digital experiences through simplicity, functionality, and intentional design. Founded in 2015, we bring together a team of passionate designers and developers who share a common vision: to strip away the unnecessary and focus on what truly matters.
+                    </p>
+                    <p class="text-secondary mb-8 leading-relaxed">
+                        Our approach combines clean aesthetics with thoughtful functionality, resulting in designs that are not only beautiful but also effective. We believe that great design should be invisible – it should serve the user and the message, not draw attention to itself.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h3 class="text-xl font-medium mb-4">Our Approach</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                We start by understanding your goals, audience, and message. From there, we create designs that are both visually stunning and strategically sound.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-4">Our Values</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                Simplicity, functionality, sustainability, and accessibility guide everything we do. We believe design should make life better for everyone.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://picsum.photos/id/1019/800/1000" alt="Design Studio" class="w-full h-[700px] object-cover">
+                        <div class="absolute -bottom-8 -left-8 bg-white p-8 shadow-xl">
+                            <p class="text-sm text-secondary mb-2">Years of Experience</p>
+                            <p class="text-4xl font-bold">10+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <!-- Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                
+                <div>
+                    <div class="bg-white/5 p-8 h-full">
+                        <h3 class="text-xl font-medium mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-map-marker"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Location</h4>
+                                    <p class="text-white/80">123 Design Street, Minimalist City, CA 90210, United States</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Email</h4>
+                                    <p class="text-white/80">hello@monodesign.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Phone</h4>
+                                    <p class="text-white/80">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-primary text-white/80 border-t border-white/10">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-6">MONO</h3>
+                    <p class="text-sm leading-relaxed">
+                        Creating minimalist design solutions that make a meaningful impact.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#work" class="hover:text-accent transition-colors">Work</a></li>
+                        <li><a href="#about" class="hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-accent transition-colors">Services</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-accent transition-colors">Brand Identity</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Web Design</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Mobile App Design</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Packaging Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Newsletter</h4>
+                    <p class="text-sm mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="bg-white/10 border border-white/20 rounded-l px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent w-full">
+                        <button type="submit" class="bg-accent text-white px-4 py-2 rounded-r hover:bg-white hover:text-primary transition-all duration-300">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm mb-4 md:mb-0">© 2025 MONO Design Studio. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll animation for elements
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('[data-aos]');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight * 0.85) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+        
+        // Initial check on page load
+        window.addEventListener('load', animateOnScroll);
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+
+
+    </body></html>
